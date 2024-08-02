@@ -1,0 +1,6 @@
+Flask==3.0.3
+# llama2==0.0.1.dev0
+# mistral==18.0.1
+
+
+

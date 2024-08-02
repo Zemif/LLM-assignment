@@ -1,0 +1,16 @@
+services:
+  python_llm:
+    build:
+      context: ./python_llm
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+
+  nodejs_llm:
+    build:
+      context: ./nodejs_llm
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - python_llm
