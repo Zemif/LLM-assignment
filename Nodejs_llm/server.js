@@ -15,7 +15,7 @@ app.post('/query', async (req, res) => {
   } catch (error) {
     console.log(error.response);
     console.error('Error sending query:', error.message);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: error.response.data });
   }
 });
 
